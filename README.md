@@ -65,15 +65,19 @@ matplotlib.rcParams['text.color'] = 'k'
 
 ## Configure Plotly to be rendered inline in the notebook.
 
+```python
 import plotly as py  
 py.offline.init_notebook_mode(connected=True)  
-plt.style.use('fivethirtyeight')  
+plt.style.use('fivethirtyeight')
+```
 
 ## Dependencies
 
+```python
 import plotly.graph_objs as go  
 import ipywidgets as widgets  
-from scipy import special 
+from scipy import special
+```
 
 ## Introduction
 
