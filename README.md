@@ -25,16 +25,17 @@ This document covers the most popular statistical methods for time series foreca
 
 ## Package instalation check:
 
-```Python Version---- 3.7.3   
+``Python Version---- 3.7.3   
 Numpy Version---- 1.16.3  
 Scipy Version---- 1.2.1  
 Scikit-Learn Version---- 0.20.3  
 Pandas Version---- 0.24.2  
 Statsmodels Version---- 0.9.0  
 Pip Version---- 19.0.3  
-Pmdarima Version---- 1.2.1```  
+Pmdarima Version---- 1.2.1``
 
-## Libraries:
+
+# Libraries:
 
 import pandas as pd  
 import numpy as np  
