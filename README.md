@@ -13,7 +13,7 @@ The dataset consists of historical product demand for a manufacturer.
 
 The data have been downloaded from Kaggle. (https://www.kaggle.com/felixzhao/productdemandforecasting/data)
 
-# Project Requirements
+# Requirements
 
 • Data Analysis and Preparation
 • Perform time series analysis for product category using various forecasting techniques
@@ -34,11 +34,8 @@ Statsmodels Version---- 0.9.0
 Pip Version---- 19.0.3
 Pmdarima Version---- 1.2.1
 
-# Imported libraries:
+# libraries:
 
-warnings.filterwarnings('ignore')
-
-# Main libraries
 import pandas as pd
 import numpy as np
 import itertools
@@ -69,10 +66,17 @@ import plotly as py
 py.offline.init_notebook_mode(connected=True)
 plt.style.use('fivethirtyeight')
 
-# Import dependencies
+# Dependencies
 import plotly.graph_objs as go
 import ipywidgets as widgets
 from scipy import special
+
+
+
+
+
+
+
 
 
 
