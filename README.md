@@ -3,7 +3,7 @@
 
 ## Problem Statement
 
-### The project goal is to predict product order demand usingtime series forecasting methods.
+The project goal is to predict product order demand usingtime series forecasting methods.
 
 ## Dataset Description
 
@@ -24,7 +24,7 @@ The data have been downloaded from Kaggle. (https://www.kaggle.com/felixzhao/pro
 This document covers the most popular statistical methods for time series forecasting. It includes data analysis and visualization, statistical functions and interactive plots implemented in python.
 
 ## Package instalation check:
-
+```python
 Python Version---- 3.7.3     
 Numpy Version---- 1.16.3    
 Scipy Version---- 1.2.1    
@@ -33,15 +33,16 @@ Pandas Version---- 0.24.2
 Statsmodels Version---- 0.9.0    
 Pip Version---- 19.0.3    
 Pmdarima Version---- 1.2.1
+```
 
-## Libraries
+### Libraries
 ```python
 import pandas as pd    
 import numpy as np    
 import itertools
 ```
 
-## Statistical packagies
+### Statistical packagies
 ```python
 import statsmodels.api as sm  
 from statsmodels.tsa.seasonal import seasonal_decompose  
@@ -52,7 +53,7 @@ from IPython.core.interactiveshell import InteractiveShell
 InteractiveShell.ast_node_interactivity = "all"
 ```
 
-## Plotting libraries
+### Plotting libraries
 ```python
 import matplotlib  
 import matplotlib.pyplot as plt  
@@ -66,14 +67,14 @@ matplotlib.rcParams['ytick.labelsize'] = 12
 matplotlib.rcParams['text.color'] = 'k'
 ```
 
-## Configure Plotly to be rendered inline in the notebook.
+### Configure Plotly to be rendered inline in the notebook.
 ```python
 import plotly as py  
 py.offline.init_notebook_mode(connected=True)  
 plt.style.use('fivethirtyeight')
 ```
 
-## Dependencies
+### Dependencies
 ```python
 import plotly.graph_objs as go  
 import ipywidgets as widgets  
@@ -82,7 +83,7 @@ from scipy import special
 
 ## Introduction
 
-### Time series forecasting is one of the most applied data science techniques in finance, supply chain management and inventory planning and very well established in statistics. The methods are used in this document as follows:
+Time series forecasting is one of the most applied data science techniques in finance, supply chain management and inventory planning and very well established in statistics. The methods are used in this document as follows:
 
 • Linear Smoothing  
 • Exponential Smoothing  
