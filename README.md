@@ -3,7 +3,7 @@
 
 ## Problem Statement
 
-The project goal is to predict product order demand usingtime series forecasting methods.
+### The project goal is to predict product order demand usingtime series forecasting methods.
 
 ## Dataset Description
 
@@ -34,11 +34,12 @@ Statsmodels Version---- 0.9.0
 Pip Version---- 19.0.3    
 Pmdarima Version---- 1.2.1
 
-## Libraries:
-
+## Libraries
+```python
 import pandas as pd    
 import numpy as np    
-import itertools 
+import itertools
+```
 
 ## Statistical packagies
 ```python
@@ -66,7 +67,6 @@ matplotlib.rcParams['text.color'] = 'k'
 ```
 
 ## Configure Plotly to be rendered inline in the notebook.
-
 ```python
 import plotly as py  
 py.offline.init_notebook_mode(connected=True)  
@@ -74,7 +74,6 @@ plt.style.use('fivethirtyeight')
 ```
 
 ## Dependencies
-
 ```python
 import plotly.graph_objs as go  
 import ipywidgets as widgets  
@@ -83,7 +82,7 @@ from scipy import special
 
 ## Introduction
 
-Time series forecasting is one of the most applied data science techniques in finance, supply chain management and inventory planning and very well established in statistics. The methods are used in this document as follows:
+### Time series forecasting is one of the most applied data science techniques in finance, supply chain management and inventory planning and very well established in statistics. The methods are used in this document as follows:
 
 • Linear Smoothing  
 • Exponential Smoothing  
