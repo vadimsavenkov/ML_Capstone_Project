@@ -103,6 +103,24 @@ import ipywidgets as widgets
 
 from scipy import special
 
+# Introduction
+
+Time series forecasting is one of the most applied data science techniques in finance, supply chain management and inventory planning and very well established in statistics. The methods are used in this document as follows:
+
+• Linear Smoothing
+
+• Exponential Smoothing
+
+• Holt's Linear Trend
+
+• Holt-Winters Method
+
+• Seasonal ARIMA(Autoregressive Integrated Moving Average)
+
+
+
+
+
 
 
 
