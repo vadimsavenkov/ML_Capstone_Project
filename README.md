@@ -75,7 +75,7 @@ import plotly.graph_objs as go
 import ipywidgets as widgets  
 from scipy import special  
 
-# Introduction
+## Introduction
 
 Time series forecasting is one of the most applied data science techniques in finance, supply chain management and inventory planning and very well established in statistics. The methods are used in this document as follows:
 
@@ -85,12 +85,12 @@ Time series forecasting is one of the most applied data science techniques in fi
 • Holt-Winters Method  
 • Seasonal ARIMA(Autoregressive Integrated Moving Average)  
 
-# Data Preprocessing
+## Data Preprocessing
 
 • Read dataset and explore the features
 
-"""df = pd.read_csv('HPD2.csv', parse_dates=['Date'])"""
-df.head()
+'''df = pd.read_csv('HPD2.csv', parse_dates=['Date'])
+df.head()'''
 
 
 
