@@ -41,17 +41,18 @@ import numpy as np
 import itertools 
 
 ## Statistical packagies
-
+```python
 import statsmodels.api as sm  
 from statsmodels.tsa.seasonal import seasonal_decompose  
 from sklearn import metrics  
 from pmdarima.arima import auto_arima  
 import pmdarima as pm  
 from IPython.core.interactiveshell import InteractiveShell  
-InteractiveShell.ast_node_interactivity = "all" 
+InteractiveShell.ast_node_interactivity = "all"
+```
 
 ## Plotting libraries
-
+```python
 import matplotlib  
 import matplotlib.pyplot as plt  
 import seaborn as sns  
@@ -62,6 +63,7 @@ matplotlib.rcParams['axes.labelsize'] = 14
 matplotlib.rcParams['xtick.labelsize'] = 12  
 matplotlib.rcParams['ytick.labelsize'] = 12  
 matplotlib.rcParams['text.color'] = 'k'
+```
 
 ## Configure Plotly to be rendered inline in the notebook.
 
