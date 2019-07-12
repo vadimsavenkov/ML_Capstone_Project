@@ -119,6 +119,13 @@ Time series forecasting is one of the most applied data science techniques in fi
 
 # Data Preprocessing
 
+• Read dataset and explore the fetures
+
+df = pd.read_csv('HPD2.csv', parse_dates=['Date'])
+df.head()
+
+
+
 
 
 
