@@ -23,7 +23,7 @@ The data have been downloaded from Kaggle. (https://www.kaggle.com/felixzhao/pro
 
 This document covers the most popular statistical methods for time series forecasting. It includes data analysis and visualization, statistical functions and interactive plots implemented in python.
 
-## Package instalation check:
+### Package instalation check:
 ```python
 Python Version---- 3.7.3     
 Numpy Version---- 1.16.3    
@@ -98,6 +98,13 @@ Time series forecasting is one of the most applied data science techniques in fi
 ```python
 df = pd.read_csv('HPD2.csv', parse_dates=['Date'])  
 df.head()
+
+Product_Code	Warehouse	Product_Category	Date	Order_Demand
+0	Product_1507	Whse_C	Category_019	2011-09-02	1250
+1	Product_0608	Whse_C	Category_001	2011-09-27	5
+2	Product_1933	Whse_C	Category_001	2011-09-27	23
+3	Product_0875	Whse_C	Category_023	2011-09-30	5450
+4	Product_0642	Whse_C	Category_019	2011-10-31	3
 ```
 
 
