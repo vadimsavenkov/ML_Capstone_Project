@@ -34,87 +34,62 @@ Statsmodels Version---- 0.9.0
 Pip Version---- 19.0.3  
 Pmdarima Version---- 1.2.1  
 
-# libraries:
+## Libraries:
 
-import pandas as pd
+import pandas as pd  
+import numpy as np  
+import itertools  
 
-import numpy as np
+## Statistical packagies
 
-import itertools
+import statsmodels.api as sm  
+from statsmodels.tsa.seasonal import seasonal_decompose  
+from sklearn import metrics  
+from pmdarima.arima import auto_arima  
+import pmdarima as pm  
+from IPython.core.interactiveshell import InteractiveShell  
+InteractiveShell.ast_node_interactivity = "all"  
 
-# Statistical packagies
+## Plotting libraries
 
-import statsmodels.api as sm
-
-from statsmodels.tsa.seasonal import seasonal_decompose
-
-from sklearn import metrics
-
-from pmdarima.arima import auto_arima
-
-import pmdarima as pm
-
-from IPython.core.interactiveshell import InteractiveShell
-
-InteractiveShell.ast_node_interactivity = "all"
-
-# Plotting libraries
-
-import matplotlib
-
-import matplotlib.pyplot as plt
-
-import seaborn as sns
-
-import scipy
-
-%matplotlib inline
-
-from matplotlib.pylab import rcParams
-
-matplotlib.rcParams['axes.labelsize'] = 14
-
-matplotlib.rcParams['xtick.labelsize'] = 12
-
-matplotlib.rcParams['ytick.labelsize'] = 12
-
+import matplotlib  
+import matplotlib.pyplot as plt  
+import seaborn as sns  
+import scipy  
+%matplotlib inline  
+from matplotlib.pylab import rcParams  
+matplotlib.rcParams['axes.labelsize'] = 14  
+matplotlib.rcParams['xtick.labelsize'] = 12  
+matplotlib.rcParams['ytick.labelsize'] = 12  
 matplotlib.rcParams['text.color'] = 'k'
 
-# Configure Plotly to be rendered inline in the notebook.
+## Configure Plotly to be rendered inline in the notebook.
 
-import plotly as py
+import plotly as py  
+py.offline.init_notebook_mode(connected=True)  
+plt.style.use('fivethirtyeight')  
 
-py.offline.init_notebook_mode(connected=True)
+## Dependencies
 
-plt.style.use('fivethirtyeight')
-
-# Dependencies
-
-import plotly.graph_objs as go
-
-import ipywidgets as widgets
-
-from scipy import special
+import plotly.graph_objs as go  
+import ipywidgets as widgets  
+from scipy import special  
 
 # Introduction
 
 Time series forecasting is one of the most applied data science techniques in finance, supply chain management and inventory planning and very well established in statistics. The methods are used in this document as follows:
 
-• Linear Smoothing
-
-• Exponential Smoothing
-
-• Holt's Linear Trend
-
-• Holt-Winters Method
-
-• Seasonal ARIMA(Autoregressive Integrated Moving Average)
+• Linear Smoothing  
+• Exponential Smoothing  
+• Holt's Linear Trend  
+• Holt-Winters Method  
+• Seasonal ARIMA(Autoregressive Integrated Moving Average)  
 
 # Data Preprocessing
 
 • Read dataset and explore the features
 
-df = pd.read_csv('HPD2.csv', parse_dates=['Date'])
+"""df = pd.read_csv('HPD2.csv', parse_dates=['Date'])"""
 df.head()
 
 
