@@ -106,6 +106,7 @@ Product_Code	Warehouse	Product_Category	Date	Order_Demand
 3	Product_0875	Whse_C	Category_023	2011-09-30	5450
 4	Product_0642	Whse_C	Category_019	2011-10-31	3
 ```
+Dataset has 5 features:
 1. Product Code (categorical): 2160 products  
 2. Warehouse (categorical): 4 warehouses  
 3. Product category (categorical): 33 categories    
