@@ -1,29 +1,29 @@
 
-Product demand predictive analysis using time series forecasting methods. 
+# Product demand predictive analysis using time series forecasting methods. 
 
-Problem Statement
+# Problem Statement
 
 The project goal is to predict product order demand usingtime series forecasting methods.
 
-Dataset Description
+# Dataset Description
 
 The dataset consists of historical product demand for a manufacturer.
 
-Source of data 
+# Source of data 
 
 The data have been downloaded from Kaggle. (https://www.kaggle.com/felixzhao/productdemandforecasting/data)
 
-Project Requirements
+# Project Requirements
 
 • Data Analysis and Preparation
 • Perform time series analysis for product category using various forecasting techniques
 • Run models and compare evaluation metrics
 
-Project Outcome
+# Project Outcome
 
 This document covers the most popular statistical methods for time series forecasting. It includes data analysis and visualization, statistical functions and interactive plots implemented in python.
 
-Package instalation check:
+# Package instalation check:
 
 Python Version---- 3.7.3 
 Numpy Version---- 1.16.3
@@ -34,7 +34,7 @@ Statsmodels Version---- 0.9.0
 Pip Version---- 19.0.3
 Pmdarima Version---- 1.2.1
 
-Imported libraries:
+# Imported libraries:
 
 warnings.filterwarnings('ignore')
 
