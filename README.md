@@ -316,7 +316,7 @@ plt.legend(loc='best')
 plt.title("Holt-Winters Method");
 plt.show()
 ```
-![Category_001 - Holt-Winters Method]() 
+![Category_001 - Holt-Winters Method](holt_winters.png) 
 
 Calculate root mean_squared_error for Holt-Winters Method
 
