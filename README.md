@@ -349,6 +349,68 @@ print('SA_RMSE: %f' % SA_RMSE)
 SA_RMSE: 4176.116086
 ```
 
+• Adding more features to seasonal ARIMA
+
+Seasonal ARIMA models are denoted with the notation parameters (p, d, q) and accountable for data seasonality, trend, and noise 
+
+```python
+p = d = q = range(0, 2)
+pdq = list(itertools.product(p, d, q))
+seasonal_pdq = [(x[0], x[1], x[2], 12) for x in list(itertools.product(p, d, q))]
+print('Examples of parameter combinations for Seasonal ARIMA...')
+print('SARIMAX: {} x {}'.format(pdq[1], seasonal_pdq[1]))
+print('SARIMAX: {} x {}'.format(pdq[1], seasonal_pdq[2]))
+print('SARIMAX: {} x {}'.format(pdq[2], seasonal_pdq[3]))
+print('SARIMAX: {} x {}'.format(pdq[2], seasonal_pdq[4]))
+Examples of parameter combinations for Seasonal ARIMA...
+SARIMAX: (0, 0, 1) x (0, 0, 1, 12)
+SARIMAX: (0, 0, 1) x (0, 1, 0, 12)
+SARIMAX: (0, 1, 0) x (0, 1, 1, 12)
+SARIMAX: (0, 1, 0) x (1, 0, 0, 12)
+```
+
+Optimal set of parameters that yields the best performance for the SARIMA
+
+```python
+from pmdarima.arima import auto_arima
+mod = auto_arima(y, start_p=1, start_q=1,max_p=3, max_q=3, m=25,
+                           start_P=0, seasonal=True,
+                           d=1, D=1, trace=True,
+                           error_action='ignore',  
+                           suppress_warnings=True, 
+                           stepwise=True,)
+print(mod.bic())
+Fit ARIMA: order=(1, 1, 1) seasonal_order=(0, 1, 1, 25); AIC=nan, BIC=nan, Fit time=nan seconds
+Fit ARIMA: order=(0, 1, 0) seasonal_order=(0, 1, 0, 25); AIC=712.679, BIC=715.731, Fit time=0.031 seconds
+Fit ARIMA: order=(1, 1, 0) seasonal_order=(1, 1, 0, 25); AIC=702.119, BIC=708.224, Fit time=0.308 seconds
+Fit ARIMA: order=(0, 1, 1) seasonal_order=(0, 1, 1, 25); AIC=nan, BIC=nan, Fit time=nan seconds
+Fit ARIMA: order=(1, 1, 0) seasonal_order=(0, 1, 0, 25); AIC=709.355, BIC=713.934, Fit time=0.056 seconds
+Fit ARIMA: order=(1, 1, 0) seasonal_order=(2, 1, 0, 25); AIC=nan, BIC=nan, Fit time=nan seconds
+Fit ARIMA: order=(1, 1, 0) seasonal_order=(1, 1, 1, 25); AIC=nan, BIC=nan, Fit time=nan seconds
+Fit ARIMA: order=(1, 1, 0) seasonal_order=(2, 1, 1, 25); AIC=nan, BIC=nan, Fit time=nan seconds
+Fit ARIMA: order=(0, 1, 0) seasonal_order=(1, 1, 0, 25); AIC=700.888, BIC=705.467, Fit time=0.700 seconds
+Fit ARIMA: order=(0, 1, 1) seasonal_order=(1, 1, 0, 25); AIC=696.004, BIC=702.109, Fit time=0.258 seconds
+Fit ARIMA: order=(1, 1, 2) seasonal_order=(1, 1, 0, 25); AIC=nan, BIC=nan, Fit time=nan seconds
+Fit ARIMA: order=(0, 1, 1) seasonal_order=(0, 1, 0, 25); AIC=701.525, BIC=706.104, Fit time=0.192 seconds
+Fit ARIMA: order=(0, 1, 1) seasonal_order=(2, 1, 0, 25); AIC=nan, BIC=nan, Fit time=nan seconds
+Fit ARIMA: order=(0, 1, 1) seasonal_order=(1, 1, 1, 25); AIC=nan, BIC=nan, Fit time=nan seconds
+Fit ARIMA: order=(0, 1, 1) seasonal_order=(2, 1, 1, 25); AIC=nan, BIC=nan, Fit time=nan seconds
+Fit ARIMA: order=(1, 1, 1) seasonal_order=(1, 1, 0, 25); AIC=693.981, BIC=701.613, Fit time=1.867 seconds
+Fit ARIMA: order=(2, 1, 2) seasonal_order=(1, 1, 0, 25); AIC=697.968, BIC=708.652, Fit time=1.051 seconds
+Fit ARIMA: order=(1, 1, 1) seasonal_order=(0, 1, 0, 25); AIC=706.017, BIC=712.123, Fit time=0.182 seconds
+Fit ARIMA: order=(1, 1, 1) seasonal_order=(2, 1, 0, 25); AIC=nan, BIC=nan, Fit time=nan seconds
+Fit ARIMA: order=(1, 1, 1) seasonal_order=(1, 1, 1, 25); AIC=nan, BIC=nan, Fit time=nan seconds
+Fit ARIMA: order=(1, 1, 1) seasonal_order=(2, 1, 1, 25); AIC=nan, BIC=nan, Fit time=nan seconds
+Fit ARIMA: order=(2, 1, 1) seasonal_order=(1, 1, 0, 25); AIC=696.302, BIC=705.460, Fit time=0.572 seconds
+Total fit time: 5.247 seconds
+701.61285453863
+```
+
+
+
+
+
+
 
 
 
