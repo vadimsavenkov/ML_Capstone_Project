@@ -129,4 +129,6 @@ Product_Category	Cat_count
 14	Category_015	22437
 23	Category_024	20371
 ```
+Top three categories by order demand are Categories 1,5 and 19. The Category_001 is picked in this case for time series analysis.
+
 
