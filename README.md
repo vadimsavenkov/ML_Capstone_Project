@@ -442,3 +442,47 @@ plt.show()
 ```
 
 ![Category_001 - SARIMA Diagnostics Plot](diagnose.png)
+
+Validate the accuracy of product demand forecast looking at predicted mean for test set of data
+
+```python
+pred = results.get_prediction(start=pd.to_datetime('2015-01-31'), dynamic=False)
+pred_ci = pred.conf_int()
+print(pred_ci)
+ax = y['2012':].plot(label='observed')
+pred.predicted_mean.plot(ax=ax, label='Test Forecast', alpha=.7, figsize=(14, 7))
+ax.fill_between(pred_ci.index,
+                pred_ci.iloc[:, 0],
+                pred_ci.iloc[:, 1], color='k', alpha=.2)
+ax.set_xlabel('Date')
+ax.set_ylabel('Category_001 Demand')
+plt.legend()
+plt.show()
+lower Order_Demand  upper Order_Demand
+2015-01-31        17279.426025        42907.153136
+2015-02-28        20407.144408        46034.865697
+2015-03-31        28797.497327        54425.216426
+2015-04-30        23826.850336        49454.568612
+2015-05-31        19257.135380        44884.853346
+2015-06-30        13685.261041        39312.978891
+2015-07-31        18958.187982        44585.905789
+2015-08-31        27168.616195        52796.333984
+2015-09-30        17955.417144        43583.134928
+2015-10-31        19080.317293        44708.035074
+2015-11-30        22765.941868        48393.659649
+2015-12-31        18657.644380        44285.362160
+2016-01-31        19467.179348        45094.897128
+2016-02-29        16448.505813        42076.223593
+2016-03-31        18605.570754        44233.288534
+2016-04-30        31411.308366        57039.026145
+2016-05-31        16485.178254        42112.896034
+2016-06-30        17864.858628        43492.576408
+2016-07-31        20445.876245        46073.594025
+2016-08-31        23333.392429        48961.110209
+2016-09-30        15703.779810        41331.497590
+2016-10-31        18829.618258        44457.336038
+2016-11-30        27505.777288        53133.495067
+2016-12-31        17457.679676        43085.397456
+```
+![Category_001 - SARIMA Forecast]()
+
