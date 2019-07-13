@@ -293,7 +293,7 @@ res = sm.tsa.seasonal_decompose(y.interpolate(), model='additive')
 resplot = res.plot()
 resplot.savefig('Seasonal_Decompose.png', dpi=150)
 ```
-![Category_001 - Holt's Linear]() 
+![Category_001 - Holt's Linear](holt_linear.png) 
 
 Calculate root mean_squared_error for Holt's Linear Trend
 
@@ -301,6 +301,29 @@ Calculate root mean_squared_error for Holt's Linear Trend
 HL_RMSE = math.sqrt(mean_squared_error(test, decom_avg.Decomp))
 print('HL_RMSE: %f' % HL_RMSE)
 HL_RMSE: 4431.645674
+```
+• Holt-Winters Method
+
+```python
+hw_avg = test.copy()
+fit_hw = ExponentialSmoothing(train , seasonal_periods=4 ,trend='add', seasonal='mul',).fit()
+hw_avg['Holt_Winter'] = fit_hw.forecast(len(test))
+plt.figure(figsize=(16,8))
+plt.plot( train, label='Train', color="Green")
+plt.plot(test, label='Test', color="Blue")
+plt.plot(hw_avg['Holt_Winter'], label='Holt_Winter', color="Red")
+plt.legend(loc='best')
+plt.title("Holt-Winters Method");
+plt.show()
+```
+![Category_001 - Holt-Winters Method]() 
+
+Calculate root mean_squared_error for Holt-Winters Method
+
+```python
+HW_RMSE = math.sqrt(mean_squared_error(test, hw_avg.Holt_Winter))
+print('HW_RMSE: %f' % HW_RMSE)
+HW_RMSE: 5488.049450
 ```
 
 
