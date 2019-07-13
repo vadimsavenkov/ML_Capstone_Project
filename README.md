@@ -291,12 +291,15 @@ res = sm.tsa.seasonal_decompose(y.interpolate(), model='additive')
 resplot = res.plot()
 resplot.savefig('Seasonal_Decompose.png', dpi=150)
 ```
+![Category_001 - Holt's Linear](decomp.png) 
 
+Calculate root mean_squared_error for Holt's Linear Trend
 
-
-
-
-
+```python
+HL_RMSE = math.sqrt(mean_squared_error(test, decom_avg.Decomp))
+print('HL_RMSE: %f' % HL_RMSE)
+HL_RMSE: 4431.645674
+```
 
 
 
