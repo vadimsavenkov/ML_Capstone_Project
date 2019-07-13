@@ -139,4 +139,8 @@ Category_001.drop(cols, axis=1, inplace=True)
 Category_001 = Category_001.sort_values('Date')
 Category_001.isnull().sum()
 ```
+```python
+plt.figure(figsize=(15, 5))
+sns.heatmap(Category_001_pivot, annot = True, cmap = "YlGnBu")
+```
 
