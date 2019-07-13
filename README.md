@@ -507,7 +507,7 @@ print(pred_uc)
 
 Visualizing future demand forecast for year 2017
 
-![Category_001 - SARIMA Final Forecast](forecast2.png)
+![Category_001 - SARIMA Final Forecast](Forecast2.png)
 
 Category_001 predicted demand in January 2017
 
