@@ -165,6 +165,13 @@ month
 11	NaN	25078.0	27088.0	31200.0	30568.0	35011.0	NaN
 12	957.0	21271.0	28882.0	32328.0	28926.0	43144.0	NaN
 ```
+• Create a heat map for pivot table
+
+```python
+plt.figure(figsize=(15, 5))
+sns.heatmap(Category_001_pivot, annot = True, cmap = "YlGnBu")
+```
+
 ![Order Demand Heat Plot - Category_001](pivot.png)
 
 • Drop NaN and incomplete data for 2011 and 2017 to prepare for forecast
