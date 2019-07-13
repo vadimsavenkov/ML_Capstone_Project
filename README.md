@@ -173,8 +173,15 @@ month
 plt.figure(figsize=(15, 5))
 sns.heatmap(Category_001_pivot, annot = True, cmap = "YlGnBu")
 ```
-
 ![Order Demand Heat Plot - Category_001](pivot.png)
+
+• Create a box plot for pivot table
+```python
+plt.figure(figsize=(15, 5))
+sns.boxplot(x="year", y="Order_Demand", data=Category_001)
+```
+
+![Order Demand Box Plot - Category_001]()
 
 • Drop NaN and incomplete data for 2011 and 2017 to prepare for forecast
 ```python
