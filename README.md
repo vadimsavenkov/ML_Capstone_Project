@@ -529,7 +529,6 @@ index = np.arange(n_groups)
 bar_width = 0.35
 opacity = 0.8
  
- 
 rects2 = plt.bar(index + bar_width, MSE, bar_width, alpha=opacity, color='b', label='Models')
  
 plt.ylabel('Root Mean Square Error')
