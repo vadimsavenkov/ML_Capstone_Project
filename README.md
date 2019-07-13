@@ -284,6 +284,8 @@ ES_RMSE: 5157.288640
 
 Create time-series decomposition plot 
 
+![Time-series decomposition plot](decomp.png) 
+
 ```python
 from pylab import rcParams
 rcParams['figure.figsize'] = 18, 8
@@ -291,7 +293,7 @@ res = sm.tsa.seasonal_decompose(y.interpolate(), model='additive')
 resplot = res.plot()
 resplot.savefig('Seasonal_Decompose.png', dpi=150)
 ```
-![Category_001 - Holt's Linear](decomp.png) 
+![Category_001 - Holt's Linear]() 
 
 Calculate root mean_squared_error for Holt's Linear Trend
 
