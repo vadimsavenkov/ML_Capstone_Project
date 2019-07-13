@@ -280,10 +280,17 @@ ES_RMSE = math.sqrt(mean_squared_error(test, exp_avg.E_Smooth))
 print('ES_RMSE: %f' % ES_RMSE)
 ES_RMSE: 5157.288640
 ```
+• Holt's Linear Trend
 
+Create time-series decomposition plot 
 
-
-
+```python
+from pylab import rcParams
+rcParams['figure.figsize'] = 18, 8
+res = sm.tsa.seasonal_decompose(y.interpolate(), model='additive')
+resplot = res.plot()
+resplot.savefig('Seasonal_Decompose.png', dpi=150)
+```
 
 
 
