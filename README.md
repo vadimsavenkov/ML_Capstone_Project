@@ -271,7 +271,7 @@ plt.legend(loc='best')
 plt.title("Exponential Smoothing");
 plt.show()
 ```
-![Category_001 - Exponential Smoothing() 
+![Category_001 - Exponential Smoothing](exp_smooth.png) 
 
 Calculate root mean_squared_error for exponential smoothing
 
