@@ -325,6 +325,30 @@ HW_RMSE = math.sqrt(mean_squared_error(test, hw_avg.Holt_Winter))
 print('HW_RMSE: %f' % HW_RMSE)
 HW_RMSE: 5488.049450
 ```
+• Preliminary seasonal ARIMA
+
+```python
+arima_avg = test.copy()
+fit_arima = sm.tsa.statespace.SARIMAX(train, order=(2, 1, 4),seasonal_order=(0,1,1,6)).fit()
+arima_avg['SARIMA'] = fit_arima.predict(start="2015-12-31", end="2016-12-31", dynamic=True)
+plt.figure(figsize=(16,8))
+plt.plot( train, label='Train', color="Green")
+plt.plot(test, label='Test', color="Blue")
+plt.plot(arima_avg['SARIMA'], label='SARIMA', color="Red")
+plt.legend(loc='best')
+plt.title("Preliminary SARIMA");
+plt.show()
+```
+![Category_001 - Holt-Winters Method]() 
+
+Calculate root mean_squared_error for seasonal ARIMA
+
+```python
+SA_RMSE = math.sqrt(mean_squared_error(test, arima_avg.SARIMA))
+print('SA_RMSE: %f' % SA_RMSE)
+SA_RMSE: 4176.116086
+```
+
 
 
 
