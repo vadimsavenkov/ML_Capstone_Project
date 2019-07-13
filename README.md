@@ -537,6 +537,7 @@ plt.xticks(index + bar_width, ('Simple_Smoothing', 'Exponential_Smoothing', 'Hol
 plt.legend()
 ```
 
+
 ![Category_001 - RMSE Comparison](RMSE compare.png)
 
 
