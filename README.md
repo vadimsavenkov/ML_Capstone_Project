@@ -406,10 +406,33 @@ Total fit time: 5.247 seconds
 701.61285453863
 ```
 
+Fit seasonal ARIMA model
 
-
-
-
+```python
+mod = sm.tsa.statespace.SARIMAX(y, trend='n', order=(0, 1, 1),seasonal_order=(0, 1, 0, 25),enforce_invertibility=False)
+results = mod.fit()
+print (results.summary())
+Statespace Model Results                                 
+==========================================================================================
+Dep. Variable:                       Order_Demand   No. Observations:                   60
+Model:             SARIMAX(0, 1, 1)x(0, 1, 0, 25)   Log Likelihood                -349.191
+Date:                            Fri, 12 Jul 2019   AIC                            702.382
+Time:                                    20:06:37   BIC                            705.435
+Sample:                                01-31-2012   HQIC                           703.423
+                                     - 12-31-2016                                         
+Covariance Type:                              opg                                         
+==============================================================================
+                 coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------
+ma.L1         -0.6133      0.094     -6.558      0.000      -0.797      -0.430
+sigma2      4.274e+07   3.73e-10   1.15e+17      0.000    4.27e+07    4.27e+07
+===================================================================================
+Ljung-Box (Q):                       49.88   Jarque-Bera (JB):                 0.44
+Prob(Q):                              0.03   Prob(JB):                         0.80
+Heteroskedasticity (H):               0.89   Skew:                            -0.26
+Prob(H) (two-sided):                  0.85   Kurtosis:                         2.82
+===================================================================================
+```
 
 
 
