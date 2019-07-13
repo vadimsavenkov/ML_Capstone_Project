@@ -193,4 +193,7 @@ DatetimeIndex(['2012-01-31', '2012-02-29', '2012-03-31', '2012-04-30',
                '2016-09-30', '2016-10-31', '2016-11-30', '2016-12-31'],
               dtype='datetime64[ns]', name='Timestamp', freq=None)
  ```             
-![]()
+
+• Data Visualization
+
+![Order Demand Observed Data - Category_001]()
