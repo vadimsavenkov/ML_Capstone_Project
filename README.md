@@ -113,8 +113,20 @@ Dataset has 5 features:
 4. Date (date): demand fulfillment date  
 5. Order demanded (integer): target demand value  
 
-
-
-
-
+• Group data by product category and make it in order by count to get the order demand for top three categories
+```python
+Cat_fltr = df.groupby(['Product_Category']).size().reset_index(name='Cat_count').sort_values(['Cat_count'],ascending=False)
+Cat_fltr.head(10)
+Product_Category	Cat_count
+18	Category_019	445251
+4	Category_005	100711
+0	Category_001	96841
+6	Category_007	81159
+20	Category_021	50938
+5	Category_006	35098
+27	Category_028	28923
+10	Category_011	22973
+14	Category_015	22437
+23	Category_024	20371
+```
 
