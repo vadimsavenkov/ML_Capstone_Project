@@ -435,11 +435,10 @@ Prob(H) (two-sided):                  0.85   Kurtosis:                         2
 ```
 
 Plot diagnostics to investigate unusual model behavior
-`
-``python
+
+```python
 results.plot_diagnostics(figsize=(16, 8))
 plt.show()
 ```
 
-
-
+![Category_001 - SARIMA Diagnostics Plot](diagnose.png)
