@@ -434,7 +434,12 @@ Prob(H) (two-sided):                  0.85   Kurtosis:                         2
 ===================================================================================
 ```
 
-
+Plot diagnostics to investigate unusual model behavior
+`
+``python
+results.plot_diagnostics(figsize=(16, 8))
+plt.show()
+```
 
 
 
