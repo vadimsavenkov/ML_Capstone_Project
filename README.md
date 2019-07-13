@@ -129,6 +129,14 @@ Product_Category	Cat_count
 14	Category_015	22437
 23	Category_024	20371
 ```
-Top three categories by order demand are Categories 1,5 and 19. The Category_001 is picked in this case for time series analysis.
+Top three counts are Categories 1,5 and 19. The Category_001 is picked in this case for time series analysis.
 
+• Create a new data frame for Category_001 and start dropping columns
+```python
+Category_001 = df.loc[df['Product_Category'] == 'Category_001'] #.sort_values(['Date'],ascending=False)
+cols = [ 'Product_Code', 'Warehouse', 'Product_Category']
+Category_001.drop(cols, axis=1, inplace=True)
+Category_001 = Category_001.sort_values('Date')
+Category_001.isnull().sum()
+```
 
