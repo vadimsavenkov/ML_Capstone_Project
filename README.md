@@ -230,6 +230,65 @@ plt.show();
 
 # Building and running forecasting models
 
+• Simple Smoothing
+
+```python
+from statsmodels.tsa.api import ExponentialSmoothing, SimpleExpSmoothing, Holt
+s_avg = test.copy()
+fit_s = SimpleExpSmoothing(train).fit(smoothing_level=0.2,optimized=False)
+s_avg['S_Smooth'] = fit_s.forecast(len(test))
+plt.figure(figsize=(14,6))
+plt.plot(train, label='Train',color="Green")
+plt.plot(test, label='Test')
+plt.plot(s_avg['S_Smooth'], label='S_Smooth',color="Red")
+plt.title("Simple Smoothing")
+plt.legend(loc='best')
+plt.show()
+```
+![Category_001 - Simple Smoothing()
+
+Calculate root mean_squared_error for simple smoothing
+
+```python
+import math
+from sklearn.metrics import mean_squared_error
+SS_RMSE = math.sqrt(mean_squared_error(test, s_avg.S_Smooth))
+print('SS_RMSE: %f' % SS_RMSE)
+SS_RMSE: 4828.459132
+```
+
+• Exponential Smoothing
+
+```python
+exp_avg = test.copy()
+fit_e = ExponentialSmoothing(train, seasonal_periods=8 ,trend='additive', seasonal='additive',).fit()
+exp_avg['E_Smooth'] = fit_e.forecast(len(test))
+plt.figure(figsize=(14,6))
+plt.plot( train, label='Train',color="Green")
+plt.plot(test, label='Test')
+plt.plot(exp_avg['E_Smooth'], label='E_Smooth',color="Red")
+plt.legend(loc='best')
+plt.title("Exponential Smoothing");
+plt.show()
+```
+![Category_001 - Exponential Smoothing() 
+
+Calculate root mean_squared_error for exponential smoothing
+
+```python
+ES_RMSE = math.sqrt(mean_squared_error(test, exp_avg.E_Smooth))
+print('ES_RMSE: %f' % ES_RMSE)
+ES_RMSE: 5157.288640
+```
+
+
+
+
+
+
+
+
+
 
 
 
