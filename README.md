@@ -181,7 +181,7 @@ plt.figure(figsize=(15, 5))
 sns.boxplot(x="year", y="Order_Demand", data=Category_001)
 ```
 
-![Order Demand Box Plot - Category_001]()
+![Order Demand Box Plot - Category_001](box plot.png)
 
 • Drop NaN and incomplete data for 2011 and 2017 to prepare for forecast
 ```python
@@ -544,5 +544,5 @@ plt.xticks(index + bar_width, ('Simple_Smoothing', 'Exponential_Smoothing', 'Hol
 plt.legend()
 ```
 
-![Compare RMSE for all the models](RMSE compare.png)
+![Compare RMSE for all the models]()
 
