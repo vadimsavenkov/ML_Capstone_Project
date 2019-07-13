@@ -201,6 +201,11 @@ DatetimeIndex(['2012-01-31', '2012-02-29', '2012-03-31', '2012-04-30',
               dtype='datetime64[ns]', name='Timestamp', freq=None)
  ```             
 
-• Data Visualization
+• Visualizing observed data
 
-![Order Demand Observed Data - Category_001]()
+```python
+y.plot(figsize=(13,6), title= 'Category_001 Observed Order_Demand', fontsize=14, color="Blue")
+plt.show()
+```
+
+![Order Demand Observed Data - Category_001](observed.png)
