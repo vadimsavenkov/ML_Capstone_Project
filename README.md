@@ -484,5 +484,60 @@ lower Order_Demand  upper Order_Demand
 2016-11-30        27505.777288        53133.495067
 2016-12-31        17457.679676        43085.397456
 ```
-![Category_001 - SARIMA Forecast]()
+Visualizing order demand forecast for last 2 years of our trained data
+
+![Category_001 - SARIMA Forecast](forecast.png)
+
+```python
+pred_uc = results.get_forecast(steps=14)
+pred_ci = pred_uc.conf_int()
+
+ax = y.plot(label='observed', figsize=(14, 7))
+pred_uc.predicted_mean.plot(ax=ax, label='Forecast')
+ax.fill_between(pred_ci.index,
+                pred_ci.iloc[:, 0],
+                pred_ci.iloc[:, 1], color='k', alpha=.25)
+ax.set_xlabel('Date')
+ax.set_ylabel('Category_001 Demand')
+plt.legend()
+plt.show()
+print(pred_ci)
+print(pred_uc)
+```
+
+Visualizing future demand forecast for year 2017
+
+![Category_001 - SARIMA Final Forecast](forecast2.png)
+
+Category_001 predicted demand in January 2017
+
+```python
+pred_uc.predicted_mean[0:1]
+2017-01-31    36377.920761
+Freq: M, dtype: float64
+```
+• Comparing root mean square error for all the models
+
+ ```python
+ # create groups for
+n_groups = 5
+MSE = (SS_RMSE, ES_RMSE, HL_RMSE, HW_RMSE, SA_RMSE)
+ 
+# create plot
+fig, ax = plt.subplots()
+index = np.arange(n_groups)
+bar_width = 0.35
+opacity = 0.8
+ 
+ 
+rects2 = plt.bar(index + bar_width, MSE, bar_width, alpha=opacity, color='b', label='Models')
+ 
+plt.ylabel('Root Mean Square Error')
+plt.title('Root Mean Square Error')
+plt.xticks(index + bar_width, ('Simple_Smoothing', 'Exponential_Smoothing', 'Holt Linear', 'Holt-Winters', 'Seasonal_ARIMA'))
+plt.legend()
+```
+
+![Category_001 - RMSE Comparison](RMSE Compare.png)
+
 
