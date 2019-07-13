@@ -113,6 +113,8 @@ Dataset has 5 features:
 4. Date (date): demand fulfillment date  
 5. Order demanded (integer): target demand value  
 
+### Note, that in this partcular case one of the categories was choosen to conduct the analysis. The same forecasting can be also performed for warehouse(s) or specific product code(s) depending on manufacturer request.
+
 • Group data by product category and make it in order by count to get the order demand for top three categories
 ```python
 Cat_fltr = df.groupby(['Product_Category']).size().reset_index(name='Cat_count').sort_values(['Cat_count'],ascending=False)
