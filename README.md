@@ -219,12 +219,16 @@ train = y.loc['2012-01-31':'2015-12-31']
 test = y.loc['2015-12-31':]
 train.shape, test.shape
 ```
+
 ```python
 train.plot(figsize=(15,6), title= 'Category_001 - Train and Test Data', fontsize=12,color="Green")
 test.plot(figsize=(15,6), fontsize=14, color="Red")
 plt.show();
 ```
-![Category_001 - Train and Test Data]()
+
+![Category_001 - Train and Test Data](train_test.png)
+
+# Building and running forecasting models
 
 
 
