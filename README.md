@@ -339,7 +339,7 @@ plt.legend(loc='best')
 plt.title("Preliminary SARIMA");
 plt.show()
 ```
-![Category_001 - Holt-Winters Method]() 
+![Category_001 - Holt-Winters Method](prelim_arim.png) 
 
 Calculate root mean_squared_error for seasonal ARIMA
 
