@@ -245,7 +245,7 @@ plt.title("Simple Smoothing")
 plt.legend(loc='best')
 plt.show()
 ```
-![Category_001 - Simple Smoothing(simple_smooth.png)
+![Category_001 - Simple Smoothing](simple_smooth.png)
 
 Calculate root mean_squared_error for simple smoothing
 
