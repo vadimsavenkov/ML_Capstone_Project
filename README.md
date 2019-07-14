@@ -15,9 +15,9 @@ The data have been downloaded from Kaggle. (https://www.kaggle.com/felixzhao/pro
 
 ## Requirements
 
-• Data Analysis and Preparation  
-• Perform time series analysis for product category using various forecasting techniques  
-• Run models and compare evaluation metrics  
+• Prepare and preprocess data set for analysis.
+• Perform time series analysis for product category using various forecasting techniques.  
+• Run models and compare evaluation metrics.  
 
 ## Project Outcome
 
@@ -85,7 +85,7 @@ from scipy import special
 
 Time series forecasting is one of the most applied data science techniques in finance, supply chain management and inventory planning and very well established in statistics. The methods are used in this document as follows:
 
-• Linear Smoothing  
+• Simple Smoothing  
 • Exponential Smoothing  
 • Holt's Linear Trend  
 • Holt-Winters Method  
