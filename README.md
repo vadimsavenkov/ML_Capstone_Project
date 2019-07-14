@@ -1,5 +1,5 @@
 
-# Product demand predictive analysis using time series forecasting methods. 
+# Product demand predictive analysis using  time series forecasting methods. 
 
 ## Problem Statement
 
