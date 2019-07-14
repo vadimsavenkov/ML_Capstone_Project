@@ -239,6 +239,8 @@ plt.show();
 
 • Simple Smoothing
 
+ Forecasting technique which forecasts the expected value equal to the average of all previously observed points.This method can be used to forecastg data with no clear trend or seasonal pattern.
+
 ```python
 from statsmodels.tsa.api import ExponentialSmoothing, SimpleExpSmoothing, Holt
 s_avg = test.copy()
@@ -266,6 +268,8 @@ SS_RMSE: 4828.459132
 
 • Exponential Smoothing
 
+Forecasting technique which using weighted averages where the weights decrease exponentially as observations come from further in the past, the smallest weights are associated with the oldest observations.
+
 ```python
 exp_avg = test.copy()
 fit_e = ExponentialSmoothing(train, seasonal_periods=8 ,trend='additive', seasonal='additive',).fit()
@@ -289,6 +293,8 @@ ES_RMSE: 5157.288640
 ```
 • Holt's Linear Trend
 
+Forecasting method that takes into account the trend of the dataset.At the beginning, observed time series are decomposed into three componenets which are Trend, Seasonality and Residual.
+
 Create time-series decomposition plot 
 
 ![Time-series decomposition plot](decomp.png) 
@@ -310,6 +316,8 @@ print('HL_RMSE: %f' % HL_RMSE)
 HL_RMSE: 4431.645674
 ```
 • Holt-Winters Method
+
+This forecasting method takes into account triple exponential smoothing that is applied it to the seasonal components in addition to level and trend.
 
 ```python
 hw_avg = test.copy()
@@ -333,6 +341,8 @@ print('HW_RMSE: %f' % HW_RMSE)
 HW_RMSE: 5488.049450
 ```
 • Preliminary seasonal ARIMA
+
+Autoregressive Integrated Moving average (ARIMA) adds the correlations in the data with each other in addition to trend and seasonality.
 
 ```python
 arima_avg = test.copy()
@@ -545,4 +555,8 @@ plt.legend()
 ```
 
 ![Compare RMSE for all the models](RMSE_compare.png)
+
+
+The seasonal ARIMA shows lower Root Mean Square Error and reasonably predicts future product demand for the Category_001. 
+
 
