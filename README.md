@@ -19,7 +19,7 @@ The data have been downloaded from Kaggle. (https://www.kaggle.com/felixzhao/pro
 • Perform time series analysis for product category using various forecasting techniques.    
 • Run models and compare evaluation metrics.  
 
-![Data Science Process]()
+![Data Science Process](DataScience.jpg)
 
 ## Project Outcome
 
