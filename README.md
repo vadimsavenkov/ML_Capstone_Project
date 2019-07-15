@@ -15,7 +15,7 @@ The data have been downloaded from Kaggle. (https://www.kaggle.com/felixzhao/pro
 
 ## Requirements
 
-• Prepare and preprocess data set for analysis.
+• Prepare and preprocess data set for analysis.  
 • Perform time series analysis for product category using various forecasting techniques.    
 • Run models and compare evaluation metrics.  
 
