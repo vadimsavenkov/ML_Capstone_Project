@@ -524,7 +524,7 @@ print(pred_ci)
 print(pred_uc)
 ```
 
-Visualizing future demand forecast for year 2017
+Visualizing future demand forecast for 2017-2018
 
 ![Category_001 - SARIMA Final Forecast](Forecast2.png)
 
